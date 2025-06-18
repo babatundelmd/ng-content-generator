@@ -1,0 +1,105 @@
+.output-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  min-height: 12.5rem;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  height: 2rem;
+  width: 2rem;
+  color: #4f46e5;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  margin-top: 1rem;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.empty-text {
+  color: #6b7280;
+  margin: 0;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.output-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #374151;
+
+  &:hover {
+    background-color: #e5e7eb;
+  }
+
+  &.copied {
+    color: #059669;
+  }
+}
+
+.copy-icon {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.25rem;
+
+  &.success {
+    color: #059669;
+  }
+}
+
+.copy-button span.success {
+  color: #059669;
+}
+
+.content-display {
+  background-color: #f9fafb;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: #1f2937;
+  line-height: 1.5;
+}
