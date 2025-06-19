@@ -2,110 +2,86 @@
   <h2 class="form-title">Generate Content</h2>
   <form (ngSubmit)="onSubmit($event)" class="form">
     <div class="form-group">
-      <label for="topic" class="form-label"> Topic or Keywords </label>
+      <label for="topic" class="form-label">Topic</label>
       <textarea
         id="topic"
         [(ngModel)]="topic"
         name="topic"
-        placeholder="Enter a topic or keywords (e.g., sustainable fashion, productivity tips, cloud computing)"
+        placeholder="Enter your main topic (e.g., sustainable fashion, productivity tips, cloud computing)"
         class="form-textarea"
-        rows="5"
+        rows="3"
         required
       ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="keywords" class="form-label">Keywords</label>
+      <input
+        type="text"
+        id="keywords"
+        [(ngModel)]="keywords"
+        name="keywords"
+        placeholder="Enter relevant keywords separated by commas"
+        class="form-input"
+      />
     </div>
 
     <div class="form-group">
       <label class="form-label">Content Type</label>
       <div class="radio-grid">
         @for (type of contentTypes; track type.id) {
-        <div class="radio-item">
-          <input
-            type="radio"
-            [id]="type.id"
-            name="contentType"
-            [value]="type.id"
-            [(ngModel)]="selectedContentType"
-            class="radio-input"
-          />
-          <label
-            [for]="type.id"
-            class="radio-label"
-            [class.selected]="selectedContentType === type.id"
-          >
-            <span>{{ type.label }}</span>
-          </label>
-        </div>
+          <div class="radio-item">
+            <input
+              type="radio"
+              [id]="type.id"
+              name="contentType"
+              [value]="type.id"
+              [(ngModel)]="selectedContentType"
+              class="radio-input"
+            />
+            <label
+              [for]="type.id"
+              class="radio-label"
+              [class.selected]="selectedContentType === type.id"
+            >
+              <span>{{ type.label }}</span>
+            </label>
+          </div>
         }
       </div>
     </div>
 
-    <button type="submit" class="submit-button">
-      <svg
-        width="21"
-        height="21"
-        viewBox="0 0 21 21"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M18.5333 3.53334L17.4667 2.46667C17.3729 2.37193 17.2613 2.29673 17.1383 2.2454C17.0152 2.19408 16.8833 2.16765 16.75 2.16765C16.6167 2.16765 16.4847 2.19408 16.3617 2.2454C16.2387 2.29673 16.1271 2.37193 16.0333 2.46667L2.46665 16.0333C2.37192 16.1271 2.29671 16.2387 2.24539 16.3617C2.19406 16.4847 2.16763 16.6167 2.16763 16.75C2.16763 16.8833 2.19406 17.0153 2.24539 17.1383C2.29671 17.2613 2.37192 17.3729 2.46665 17.4667L3.53332 18.5333C3.6265 18.6291 3.73793 18.7052 3.86102 18.7572C3.98412 18.8091 4.11637 18.8359 4.24999 18.8359C4.3836 18.8359 4.51586 18.8091 4.63895 18.7572C4.76204 18.7052 4.87347 18.6291 4.96665 18.5333L18.5333 4.96667C18.6291 4.87348 18.7052 4.76206 18.7572 4.63896C18.8091 4.51587 18.8359 4.38361 18.8359 4.25C18.8359 4.11639 18.8091 3.98413 18.7572 3.86104C18.7052 3.73795 18.6291 3.62652 18.5333 3.53334Z"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M12.1667 6.33333L14.6667 8.83333"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M4.66666 5.5V8.83333"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M16.3333 12.1667V15.5"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M8.83334 2.16667V3.83334"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M6.33333 7.16667H3"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M18 13.8333H14.6667"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M9.66667 3H8"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+    <div class="form-group">
+      <label class="form-label">Tone</label>
+      <div class="radio-grid">
+        @for (tone of toneTypes; track tone.id) {
+          <div class="radio-item">
+            <input
+              type="radio"
+              [id]="tone.id"
+              name="tone"
+              [value]="tone.id"
+              [(ngModel)]="selectedTone"
+              class="radio-input"
+            />
+            <label
+              [for]="tone.id"
+              class="radio-label"
+              [class.selected]="selectedTone === tone.id"
+            >
+              <span>{{ tone.label }}</span>
+            </label>
+          </div>
+        }
+      </div>
+    </div>
 
-      Generate Content
+    <button type="submit" class="submit-button" [disabled]="isGenerating">
+      <svg class="button-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+      </svg>
+      {{ isGenerating ? 'Generating...' : 'Generate Content' }}
     </button>
   </form>
 </div>
