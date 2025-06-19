@@ -26,10 +26,8 @@ An intelligent content generation platform built with Angular that leverages AI 
 | **Email Draft** | Professional email templates for business communication |
 
 ## 🎨 Available Tones
-
-- **Professional** - Business-focused and formal
-- **Casual** - Relaxed and conversational  
-- **Friendly** - Warm and approachable
+ 
+- **Humorous** - Funny and relaxed
 - **Formal** - Traditional and structured
 - **Enthusiastic** - Energetic and exciting
 - **Persuasive** - Compelling and convincing
@@ -182,13 +180,6 @@ Modify the SCSS variables in component files or create a global theme file.
 ```bash
 ng build --configuration=production
 ```
-
-### Deploy to Various Platforms
-
-- **Netlify**: Connect your GitHub repo for automatic deployments
-- **Vercel**: Import project and deploy with zero configuration
-- **Firebase Hosting**: Use `ng deploy` with Firebase tools
-- **AWS S3**: Upload build artifacts to S3 bucket
 
 ## 🤝 Contributing
 
