@@ -6,6 +6,8 @@ An intelligent content generation platform built with Angular that leverages AI 
 ![TypeScript](https://img.shields.io/badge/TypeScript-Latest-blue?style=flat-square&logo=typescript)
 ![SCSS](https://img.shields.io/badge/SCSS-Latest-pink?style=flat-square&logo=sass)
 
+<img width="731" height="402" alt="Image" src="https://github.com/user-attachments/assets/ccf9feb2-e8a8-4343-8685-799f102a267f" />
+
 ## ✨ Features
 
 - **Multi-Format Content Generation**: Create blog posts, social media captions, product descriptions, and email drafts
