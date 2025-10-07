@@ -83,17 +83,6 @@ src/
 
 ## 🔧 Configuration
 
-### Service Integration
-
-Update the `ContentService` to connect with your Genkit backend:
-
-```typescript
-// content.service.ts
-generateContent(payload: ContentPayload): Observable<any> {
-  return this.http.post('/api/generate-content', payload);
-}
-```
-
 ### Payload Structure
 
 The application sends the following payload to the AI service:
