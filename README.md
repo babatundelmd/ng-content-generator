@@ -2,8 +2,8 @@
 
 An intelligent content generation platform built with Angular that leverages AI to create professional content across multiple formats and tones.
 
-![Angular](https://img.shields.io/badge/Angular-19.1.3-red?style=flat-square&logo=angular)
-![TypeScript](https://img.shields.io/badge/TypeScript-Latest-blue?style=flat-square&logo=typescript)
+![Angular](https://img.shields.io/badge/Angular-21.0.0-red?style=flat-square&logo=angular)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)
 ![SCSS](https://img.shields.io/badge/SCSS-Latest-pink?style=flat-square&logo=sass)
 
 <img width="731" height="402" alt="Image" src="https://github.com/user-attachments/assets/ccf9feb2-e8a8-4343-8685-799f102a267f" />
@@ -40,7 +40,7 @@ An intelligent content generation platform built with Angular that leverages AI 
 
 - Node.js (v18 or higher)
 - npm or yarn
-- Angular CLI (v19.1.3)
+- Angular CLI (v21.0.0)
 
 ### Installation
 
@@ -141,11 +141,12 @@ The application is fully responsive with breakpoints:
 
 ## 🌟 Modern Angular Features
 
-- **Standalone Components**: Using Angular 17+ standalone architecture
+- **Angular 21**: Latest Angular version with enhanced performance and features
+- **Standalone Components**: Using modern standalone architecture
 - **New Control Flow**: Utilizing `@if` and `@for` syntax
 - **Signals**: Modern reactive programming (where applicable)
 - **Dependency Injection**: Using `inject()` function
-- **TypeScript**: Fully typed for better development experience
+- **TypeScript 5.9**: Fully typed for better development experience
 
 ## 🔧 Development
 
