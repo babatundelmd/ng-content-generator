@@ -1,8 +1,9 @@
-import { inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { GoogleGenAI } from '@google/genai';
 import { environment } from '../environments/environment';
 
+// Defines the structure (shape of data) of the content generation request
 interface ContentRequest {
   topic: string;
   contentType: 'blog_post' | 'social_media_update' | 'email_draft' | 'product_description';
@@ -27,13 +28,10 @@ export class ContentService {
 
   private async generateContentAsync(input: ContentRequest): Promise<ContentResponse> {
     const { topic, contentType, tone = 'casual', keywords } = input;
-
     let prompt = `Generate a ${contentType} about "${topic}".`;
-
     if (tone) {
       prompt += ` The tone should be ${tone}.`;
     }
-
     if (keywords) {
       prompt += ` Please incorporate the following keywords: ${keywords}.`;
     }
